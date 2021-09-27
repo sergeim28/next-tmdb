@@ -19,9 +19,8 @@ const Card: React.FC<Props> = ({
   toggleFavourite,
 }) => {
   const { id, title, release_date, poster_path, overview, vote_average } =
-    movie || {};
+    movie;
   const isFavourite = useMemo(() => favourites.includes(id), [favourites, id]);
-  if (!movie) return null;
 
   return (
     <div className={`card ${isFavourite ? "card-favourite" : ""}`}>

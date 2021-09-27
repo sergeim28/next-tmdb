@@ -57,7 +57,6 @@ const Home: React.FC<Props> = () => {
       axios
         .get("discover/movie", {
           params: {
-            api_key: process.env.API_KEY,
             language: "en-US",
             page,
             sort_by,

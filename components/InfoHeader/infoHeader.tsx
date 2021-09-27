@@ -6,8 +6,6 @@ interface Props {
 }
 
 const InfoHeader: React.FC<Props> = ({ movie }) => {
-  if (!movie) return null;
-
   const {
     genres,
     backdrop_path,

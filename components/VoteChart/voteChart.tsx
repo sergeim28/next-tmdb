@@ -10,7 +10,7 @@ const getPathColor = (score: number) => {
     red = 255;
     green = Math.round((score / 75) * 255);
   }
-  return "rgb(" + red + "," + green + ",0)";
+  return `rgb(${red},${green},0)`;
 };
 
 interface Props {
