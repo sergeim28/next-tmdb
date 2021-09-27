@@ -1,8 +1,8 @@
-import axios from "shared/axios";
+import axios from "shared/services/base";
 import Crew from "components/Crew/crew";
 import InfoHeader from "components/InfoHeader/infoHeader";
 import Head from "next/head";
-import { Cast, Movie } from "shared/models";
+import { Cast, Movie } from "shared/types/models";
 
 interface Props {
   movie: Movie;

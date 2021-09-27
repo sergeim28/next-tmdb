@@ -1,5 +1,5 @@
 import VoteChart from "components/VoteChart/voteChart";
-import { Genre, Movie } from "shared/models";
+import { Genre, Movie } from "shared/types/models";
 
 interface Props {
   movie: Movie;

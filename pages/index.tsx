@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect } from "react";
-import axios from "shared/axios";
+import axios from "shared/services/base";
 import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroller";
 import Card from "components/Card/card";
-import { Movie } from "shared/models";
+import { Movie } from "shared/types/models";
 import { useRouter } from "next/router";
 
 const LOCALSTORAGE_KEY = "tmdb-favourite-ids";

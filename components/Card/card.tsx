@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Link from "next/link";
-import { Movie } from "shared/models";
+import { Movie } from "shared/types/models";
 import slug from "slug";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import VoteChart from "../VoteChart/voteChart";
