@@ -1,0 +1,90 @@
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.15s ease-in-out;
+  @include themify($themes) {
+    background-color: themed(general-bg);
+  }
+
+  .nav-brands {
+    display: flex;
+    align-items: center;
+    @include themify($themes) {
+      color: themed(general-color);
+    }
+
+    .logo {
+      font-size: 3rem;
+      cursor: pointer;
+
+      @include mediaQuery(600px) {
+        font-size: 2rem;
+      }
+    }
+
+    .text {
+      padding-left: 5px;
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      @include mediaQuery(600px) {
+        display: none;
+      }
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+    .nav-item {
+      padding: 5px 15px;
+      cursor: pointer;
+      text-decoration: none;
+      @include themify($themes) {
+        color: themed(general-color);
+      }
+      @include mediaQuery(600px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .selected {
+      border-radius: 4px;
+      @include themify($themes) {
+        border-bottom: 2px solid themed(general-color);
+        color: themed(nav-selected-color);
+        background-color: themed(nav-selected-bg);
+      }
+    }
+  }
+
+  .nav-theme {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+
+    button {
+      background: none;
+      cursor: pointer;
+      border: 0;
+      padding: 5px;
+
+      svg {
+        transition: color 0.5s ease-in-out;
+        @include themify($themes) {
+          color: themed(general-color);
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

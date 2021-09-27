@@ -1,0 +1,41 @@
+#crew {
+  cursor: default;
+  .container {
+    .col-xs {
+      max-width: 170px;
+      z-index: 4;
+      @include themify($themes) {
+        filter: drop-shadow(2px 4px 6px themed(shadow-color));
+      }
+    }
+    .cast-card {
+      margin: 10px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      .card-img {
+        min-width: 138px;
+        @include mediaQuery(767px) {
+          min-width: 90px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-top-right-radius: 8px;
+          border-top-left-radius: 8px;
+        }
+      }
+
+      .card-body {
+        min-height: 75px;
+        padding: 10px 10px 0px 10px;
+        .name {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .character {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

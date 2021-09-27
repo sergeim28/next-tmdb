@@ -1,0 +1,18 @@
+@import "reset.scss";
+@import "themes";
+@import "mixins";
+@import "global";
+
+// Third Party Package Styles
+@import "../../node_modules/flexboxgrid/dist/flexboxgrid.min.css";
+@import "../../node_modules/react-circular-progressbar/dist/styles.css";
+
+// Component Styles
+@import "../../components/Layout/layout.scss";
+@import "../../components/Card/card.scss";
+@import "../../components/Header/header.scss";
+@import "../../components/VoteChart/voteChart.scss";
+@import "../../components/InfoHeader/infoHeader.scss";
+@import "../../components/Crew/crew.scss";
+
+

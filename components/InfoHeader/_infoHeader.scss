@@ -1,0 +1,159 @@
+#infoHeader {
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-position: right -200px top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    .bg-color {
+      height: 100%;
+      @include themify($themes) {
+        background-image: themed(background-image);
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 430px;
+  }
+  .poster {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 8px;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: drop-shadow(2px 4px 6px black);
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    cursor: default;
+
+    @include mediaQuery(767px) {
+      font-size: 1.5rem;
+    }
+    span {
+      font-size: 1.7rem;
+      cursor: default;
+      @include mediaQuery(767px) {
+        font-size: 1.2rem;
+      }
+      @include themify($themes) {
+        color: themed(release-date);
+      }
+    }
+  }
+
+  .info-group {
+    display: flex;
+    font-size: 14px;
+    margin-top: 4px;
+    cursor: default;
+    @include mediaQuery(767px) {
+      flex-direction: column;
+    }
+    .release-date {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '\2022';
+        left: 6px;
+        position: absolute;
+        top: 8.1px;
+        font-size: 35px;
+        line-height: 0;
+      }
+      @include mediaQuery(767px) {
+        margin-top: 10px;
+      }
+    }
+    .genres {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '\2022';
+        left: 6px;
+        position: absolute;
+        top: 8.1px;
+        font-size: 35px;
+        line-height: 0;
+      }
+      @include mediaQuery(767px) {
+        margin-top: 10px;
+      }
+    }
+    .runtime {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '\2022';
+        left: 6px;
+        position: absolute;
+        top: 8.1px;
+        font-size: 35px;
+        line-height: 0;
+      }
+      @include mediaQuery(767px) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .votechart {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+
+    .text {
+      padding-left: 10px;
+      font-weight: 700;
+      cursor: default;
+    }
+  }
+
+  .tagline {
+    margin-top: 28px;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  .overview-title {
+    margin: 20px 0px 10px 0px;
+    font-size: 1.4rem;
+  }
+
+  .overview {
+    font-size: 1rem;
+    line-height: 1.4;
+    cursor: default;
+  }
+
+  h3 {
+    cursor: default;
+  }
+  
+  .d-xs-none {
+    display: none;
+    @include mediaQuery(767px) {
+      display: unset;
+    }
+  }
+
+  .d-xs-none-o {
+    @include mediaQuery(767px) {
+      display: none;
+    }
+  }
+}
